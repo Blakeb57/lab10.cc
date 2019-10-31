@@ -17,17 +17,18 @@ using namespace std;
 
 
 /*PROTOTYPES*/
-
 double lowcosts(float prices[], const int count);
 double highcosts(float prices[], const int count);
 
 
+/* MAIN FUNCTION */
 int main(int argc, char const *argv[]) {
 
     const int count = 6;
     float prices[6];
     string names[6];
-    ifstream inStream;
+
+    ifstream inStream;                  // this part of the main function takes the data1.txt file and puts it into the float prices array
     ofstream outStream;
     inStream.open("data1.txt");
     outStream.open("output.txt");
@@ -46,7 +47,7 @@ int main(int argc, char const *argv[]) {
 
     }
 
-    ifstream inStream1;
+    ifstream inStream1;                // this part of the main function takes the data2.txt file and puts it into the string names array
     ofstream outStream1;
     inStream1.open("data2.txt"); 
     outStream1.open("output.txt");
@@ -64,13 +65,13 @@ int main(int argc, char const *argv[]) {
     }
 
 
-    cout << names[0] << " is the cheapest price $" << lowcosts(prices, count) << "0" << endl;
-    cout << names[2] <<" is the most expensive price $" << highcosts(prices, count) << ".00" << endl;
+    cout << names[0] << " is the cheapest price $" << lowcosts(prices, count) << "0" << endl;                   // these two couts output the most expensive item with its price along with the cheapest item with its price
+    cout << names[2] <<" is the most expensive price $" << highcosts(prices, count) << ".00" << endl;           // uses the element in the array names that matches the lowest and highest price
 
 }
 
 
-double lowcosts(float prices[], const int count){
+double lowcosts(float prices[], const int count){               // this function finds the lowest price in the prices array
 
     double low = 1000;
 
@@ -87,7 +88,7 @@ double lowcosts(float prices[], const int count){
 }
 
 
-double highcosts(float prices[], const int count){
+double highcosts(float prices[], const int count){          // this function finds the highest price in the prices array
 
     double high = -1000;
 
