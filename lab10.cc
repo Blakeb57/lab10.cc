@@ -65,8 +65,8 @@ int main(int argc, char const *argv[]) {
     }
 
 
-    cout << names[0] << " is the cheapest price $" << lowcosts(prices, count) << "0" << endl;                   // these two couts output the most expensive item with its price along with the cheapest item with its price
-    cout << names[2] <<" is the most expensive price $" << highcosts(prices, count) << ".00" << endl;           // uses the element in the array names that matches the lowest and highest price
+    cout << "The " << names[0] << " is the cheapest part that costs $" << lowcosts(prices, count) << "0" << endl;                   // these two couts output the most expensive item with its price along with the cheapest item with its price
+    cout << "The " << names[2] <<" is the most expensive part that costs $" << highcosts(prices, count) << ".00" << endl;           // uses the element in the array names that matches the lowest and highest price
 
 }
 
